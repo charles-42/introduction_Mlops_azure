@@ -1,9 +1,26 @@
-name: learn-github-actions
+# Facultatif - Nom du workflow tel qu’il apparaît sous l’onglet Actions du référentiel GitHub.
+name: learn-github-actions 
+
+# Facultatif : nom des exécutions de workflow générées à partir du workflow, qui s’affiche dans la liste des exécutions de workflow sous l’onglet « Actions » de votre référentiel.
 run-name: ${{ github.actor }} is learning GitHub Actions
+
+# Spécifie le déclencheur de ce workflow. Cet exemple utilise l’événement push
 on: [push]
+
+# Regroupe tous les travaux qui s’exécutent dans le workflow learn-github-actions.
 jobs:
+  
+  # Définit un job nommé echo-learn-ga 
   echo-learn-ga:
+
+    # Configure le travail à exécuter sur la dernière version d’un exécuteur Ubuntu Linux
     runs-on: ubuntu-latest
+    
+    # Regroupe toutes les étapes qui s’exécutent dans le travail echo-learn-ga 
     steps:
+      
+      # Le mot clé uses spécifie que cette étape exécute la version v3 de l’action actions/checkout. Il s’agit d’une action qui extrait votre dépôt sur l’exécuteur, ce qui vous permet d’exécuter des scripts ou d’autres actions sur votre code
       - uses: actions/checkout@v3
+
+      # Execute la commande echo
       - run: echo "I learn github actions"
