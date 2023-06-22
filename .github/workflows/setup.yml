@@ -34,7 +34,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
-    # Deploys Azure resources 
+    # Deploys Azure resources (try)
     - name: Deploy Azure resources
       uses: azure/CLI@v1
       with:

@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "westeurope"
+        },
+        "workspaceName": {
+            "value": "azuremlpl"
+        },
+        "keyVaultName": {
+            "value": "azuremlplkv0"
+        },
+        "applicationInsightsName": {
+            "value": "azuremlplai"
+        },
+        "storageAccountName": {
+            "value": "azuremlpls"
+        },
+        "storageAccountType": {
+            "value": "Standard_ZRS"
+        },
+        "containerRegistryName": {
+            "value": "azuremlplcr"
+        },
+        "logAnalyticsWorkspaceResourceId": {
+            "value": "/subscriptions/111aaa69-41b9-4dfd-b6af-2ada039dd1ae/resourcegroups/RG-BENIAC/providers/microsoft.operationalinsights/workspaces/azuremlpllaw"
+        },
+        "privateDnsZoneResourceGroupName": {
+            "value": "RG-BENIAC"
+        },
+        "privateLinkSubnetResourceId": {
+            "value": "/subscriptions/111aaa69-41b9-4dfd-b6af-2ada039dd1ae/resourceGroups/RG-BENIAC/providers/Microsoft.Network/virtualNetworks/amlVnet/subnets/privateLinkSubnet"
+        },
+        "serviceEndpointSubnetResourceId": {
+            "value": "/subscriptions/111aaa69-41b9-4dfd-b6af-2ada039dd1ae/resourceGroups/RG-BENIAC/providers/Microsoft.Network/virtualNetworks/amlVnet/subnets/serviceEndpointSubnet"
+        }
+    }
+}
